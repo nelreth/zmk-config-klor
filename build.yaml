@@ -20,7 +20,7 @@
 ---
 include:
   - board: xiao_ble//zmk
-    shield: klor_dongle #prospector_adapter
+    shield: klor_dongle prospector_adapter
     # snippet: studio-rpc-usb-uart
     # cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: nice_nano//zmk
