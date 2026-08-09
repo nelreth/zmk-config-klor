@@ -4,8 +4,10 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: nelreth                            # <--- add this
-      url-base: https://github.com/nelreth     # <--- and thisq
+    # - name: nelreth                            # <--- add this
+    #   url-base: https://github.com/nelreth     # <--- and thisq
+    - name: prospector
+      url-base: https://github.com/t-ogura
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -13,8 +15,12 @@ manifest:
       remote: zmkfirmware
       import: app/west.yml
       revision: main
-    - name: prospector-zmk-module                 # <--- and these
-      remote: nelreth                          # <---
-      revision: main                             # <---
+    - name: prospector-zmk-module
+      remote: prospector
+      revision: v2.2.2
+      path: modules/prospector-zmk-module
+    # - name: prospector-zmk-module                 # <--- and these
+    #   remote: nelreth                          # <---
+    #   revision: main                             # <---
   self:
     path: config
